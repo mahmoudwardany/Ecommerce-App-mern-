@@ -119,7 +119,7 @@ localStorage.removeItem('auth')
               )}
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active nav-link mt-3 fs-bold" : "nav-link fs-bold"
+                  isActive ? "active nav-link" : "nav-link "
                 }
                 to="/cart"
               >

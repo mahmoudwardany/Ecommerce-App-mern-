@@ -22,7 +22,7 @@ setOrders(data?.orders)
       </div>
       <div className="col-md-9">
         <h1 className="text-center">All Orders</h1>
-        {orders?.map((o, i) => {
+        {orders.length <1 ? <h2 className="text-center">Loading...</h2>:orders?.map((o, i) => {
           return (
             <div className="border shadow" key={i}>
               <table className="table">

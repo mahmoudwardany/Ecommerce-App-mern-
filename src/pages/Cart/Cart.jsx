@@ -12,7 +12,7 @@ const Cart = () => {
   const [clientToken,setClientToken]=useState('')
   const [instance, setInstance] = useState("");
   const [loading,setLoading]=useState(false)
-  const cart=useSelector(state => state.cart.cartitem)
+  let cart=useSelector(state => state.cart.cartitem)
 const dispatch=useDispatch()
   const navigate = useNavigate();
   //total
@@ -35,6 +35,7 @@ const dispatch=useDispatch()
       });
       setLoading(false);
       localStorage.removeItem("cartitem");
+      cart=[]
       navigate("/dashboard/user/orders");
       toast.success("Payment Completed Successfully ");
     } catch (error) {

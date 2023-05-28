@@ -47,7 +47,6 @@ const [error,setError]=useState('')
       if (data && data?.message === "Login Successful") {
         toast.success(data && data?.message);
         setLoading(true)
-console.log(data)
         setAuth({
           ...auth,
           user:data.user,
