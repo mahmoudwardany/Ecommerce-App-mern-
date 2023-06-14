@@ -5,8 +5,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../reducers/AuthContext";
 import SearchForm from "../SearchForm";
 import useCategory from "../../hooks/useCategory";
-import {  Avatar, Badge } from 'antd';
-import { useCart } from "../../reducers/cart";
+import {   Badge } from 'antd';
 import { useSelector } from "react-redux";
 
 const Header = () => {

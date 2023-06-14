@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ClearCart, addtoCart, descressQuantity, removeFromCart, useCart } from '../../reducers/cart'
+import { ClearCart, addtoCart, descressQuantity, removeFromCart } from '../../reducers/cart'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../reducers/AuthContext';
 import axios from 'axios';

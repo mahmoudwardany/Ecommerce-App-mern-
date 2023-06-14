@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout/Layout';
 import Register from './pages/Register/Register';
@@ -30,7 +30,7 @@ import Orders from './pages/user/Orders';
 import OrdersAdmin from './pages/Admin/Orders';
 
 function App() {
-  let routes = createBrowserRouter([
+  let routes = createHashRouter([
     {
       path: "", element: <Layout />, children: [
         //user
