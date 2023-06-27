@@ -1,5 +1,7 @@
-import { RouterProvider, createHashRouter } from 'react-router-dom';
-import './App.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";import './App.css';
 import Layout from './components/Layout/Layout';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
@@ -24,13 +26,12 @@ import SearchPage from './pages/Search/SearchPage';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import CategoriesDetails from './pages/Categories/CategoriesDetails';
 import Cart from './pages/Cart/Cart';
-import { CartProvider } from './reducers/cart';
 import Profile from './pages/user/Profile';
 import Orders from './pages/user/Orders';
 import OrdersAdmin from './pages/Admin/Orders';
 
 function App() {
-  let routes = createHashRouter([
+  let routes = createBrowserRouter([
     {
       path: "", element: <Layout />, children: [
         //user
@@ -58,9 +59,6 @@ function App() {
         { path: 'category/:slug', element: <CategoriesDetails/> },
         { path: 'cart', element: <Cart/> },
 
-
-
-
         { path: 'contact', element: <Contact/> },
         { path: 'about', element: <About/> },
         { path: '*', element: <PageNotFound/> },
@@ -70,13 +68,9 @@ function App() {
   return (
     <AuthProvider >
       <SearchProvider>
-         <RouterProvider router={routes} /> 
-        
+      <RouterProvider router={routes} /> 
       </SearchProvider>
     </AuthProvider>
-      
-    
-
   );
 }
 

@@ -21,7 +21,9 @@ const UpdateProduct = () => {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://ecomnode.onrender.com/api/v1/category");
+      const { data } = await axios.get(
+        "https://ecomnode.onrender.com/api/v1/category"
+      );
       if (data?.success) {
         setCategories(data?.categories);
       }
@@ -80,20 +82,20 @@ const UpdateProduct = () => {
       toast.error("something went wrong");
     }
   };
-  const handleDelete=async()=>{
+  const handleDelete = async () => {
     try {
-        let answer = window.prompt("Are You Sure want to delete this product ? ");
-        if (!answer) return;
-        const { data } = await axios.delete(
-          `https://ecomnode.onrender.com/api/v1/product/${id}`
-        );
-        toast.success("Product Deleted Successfully");
-        navigate("/dashboard/admin/products");
-      } catch (error) {
-        console.log(error);
-        toast.error("Something went wrong");
-      }
-  }
+      let answer = window.prompt("Are You Sure want to delete this product ? ");
+      if (!answer) return;
+      const { data } = await axios.delete(
+        `https://ecomnode.onrender.com/api/v1/product/${id}`
+      );
+      toast.success("Product Deleted Successfully");
+      navigate("/dashboard/admin/products");
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+  };
   return (
     <div className="container-fluid  p-3">
       <div className="row">
@@ -210,7 +212,7 @@ const UpdateProduct = () => {
               <button className="btn btn-primary" onClick={handleUpdate}>
                 Update PRODUCT
               </button>
-              <br/>
+              <br />
               <button className="btn btn-danger mt-3" onClick={handleDelete}>
                 Delete PRODUCT
               </button>

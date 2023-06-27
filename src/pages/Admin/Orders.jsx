@@ -52,7 +52,7 @@ setOrders(data?.orders)
                     <td>{i + 1}</td>
                     <td>
                       <Select bordered={false} defaultValue={o?.status}
-                      onChange={(value)=>handleChange(o._id,value)}
+                      onChange={(value)=>handleChange(o?._id,value)}
                       >
                         {status.map((s,i)=>(
                           <Option value={s} key={i}>{s}</Option>
@@ -62,7 +62,7 @@ setOrders(data?.orders)
                     </td>
                     <td>{o?.buyer?.name}</td>
                     <td>{moment(o?.createAt).fromNow()}</td>
-                    <td>{o?.payment.success ? "Success" : "Failed"}</td>
+                    <td>{o?.payment?.success ? "Success" : "Failed"}</td>
                     <td>{o?.products?.length}</td>
                   </tr>
                 </tbody>
@@ -74,15 +74,15 @@ setOrders(data?.orders)
                       <img
                         src={`http://localhost:5000/api/v1/product/get-photo/${p._id}`}
                         className="card-img-top"
-                        alt={p.name}
+                        alt={p?.name}
                         width="100px"
                         height={"100px"}
                       />
                     </div>
                     <div className="col-md-8">
-                      <p>{p.name}</p>
-                      <p>{p.description.substring(0, 30)}</p>
-                      <p>Price : {p.price}</p>
+                      <p>{p?.name}</p>
+                      <p>{p?.description?.substring(0, 30)}</p>
+                      <p>Price : {p?.price}</p>
                     </div>
                   </div>
                 ))}

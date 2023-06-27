@@ -53,11 +53,11 @@ const [error,setError]=useState('')
         user
       ).catch((error)=>{setError(error.response.data?.message)
         setLoading(true)});
-      if (data.success) {
-        toast.success(data.message);
+      if (data?.success) {
+        toast.success(data?.message);
         nav("/login");
       } else {
-        toast.error(data.message);
+        toast.error(data?.message);
       }
     } catch (error) {
       console.log(error.response.data.message);
