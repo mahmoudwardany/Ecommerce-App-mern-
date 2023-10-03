@@ -5,20 +5,25 @@
   .home-page h1 {
     color: gray;
     font-family: "Playfair Display", serif;
+
   }
   
   .home-page {
     display: flex;
     flex-wrap: wrap;
+    background-color:black
   }
   .home-page .card {
     background-color: rgba(128, 128, 128, 0.097);
     width: 18rem;
+    background-color:black
+
   }
   .home-page .card-name-price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
   }
   
   .home-page .card-price {

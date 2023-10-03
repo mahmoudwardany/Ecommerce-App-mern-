@@ -2,7 +2,7 @@
 *{
   margin: 0;
   padding: 0 ;
-  box-sizing: border-box !important;
+  box-sizing: border-box ;
 }
 /* font-family: 'Poppins', sans-serif; 
 font-family: 'Playfair Display', serif;
@@ -12,9 +12,16 @@ font-family: 'Playfair Display', serif;
   font-size: 17px;
   text-transform: uppercase;
   line-height: 25px;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow:0 8px 6px -6px gray;
-  border-bottom: .2px solid gray !important;
+background-color: #000 !important;
+}
+.alpha {
+  color:brown;
+  font-size: 26px;
+}
+.badge{
+  padding: 5px;
+  color:white;
+  font-size: 16px !important;
 }
 .nav-link{
   font-weight: 300 !important;

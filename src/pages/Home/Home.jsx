@@ -110,9 +110,9 @@ const dispatch=useDispatch()
             </Radio.Group>
           </div>
   </div>
-  <div className='col-md-8 text-center mt-2'>
+  <div className='col-md-8 text-md-center mx-auto mt-2'>
     <h2>All Products</h2>
-  <div className="d-flex flex-wrap h-25">
+  <div className="d-flex flex-wrap h-25 text-md-center mx-auto ">
     {loading?<h3>Loading...</h3>:products?.map((p) => (
               <div key={p?._id} 
               className="card m-2" style={{ width: "18rem",height:"400px" }}>

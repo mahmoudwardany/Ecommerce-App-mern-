@@ -27,10 +27,10 @@ localStorage.removeItem('auth')
  
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="dark" expand="lg" variant="dark" >
         <Container>
           <Link to="/" className="nav-link navbar-brand">
-            Ecommerce-App
+            <span className='alpha'>E</span>-Store
           </Link>
           <SearchForm/>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -66,7 +66,7 @@ localStorage.removeItem('auth')
                   ))}
                 </ul>
               </li>
-             
+            
               {!auth.user ? (
                 <>
                   <NavLink
@@ -112,17 +112,19 @@ localStorage.removeItem('auth')
                           Logout
                         </button>
                       </li>
+                
                     </ul>
                   </li>
+              
                 </>
               )}
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "active nav-link" : "nav-link "
-                }
+                <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "active nav-link" : "nav-link"
+                    }
                 to="/cart"
               >
-                 <Badge count={!auth.user ?"":cart?.length} >
+                <Badge count={!auth.user ?"":cart?.length } className="badge">
       Cart
     </Badge>
               </NavLink>
